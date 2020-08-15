@@ -31,7 +31,7 @@
         <div class="container">
             <div class="registration_form">
                 <form action="reg.php" method="post">
-                    
+
                     <p>
                         <label class="form-label" for="simpleinput">Введите логин</label>
                     </p>
@@ -50,7 +50,7 @@
                         <label class="form-label" for="simpleinput">Введите пароль</label>
                     </p>
                     <p>
-                        <input type="text" class="form-control" name="password">
+                        <input type="password" class="form-control" name="password">
                     </p>
                     
                     <button class="btn btn-success mt-3" type="submit">Создать учётную запись</button>
