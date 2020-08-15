@@ -1,0 +1,58 @@
+/*---------- Обнуление элементов ----------*/
+
+body {margin: 0; padding: 0;}
+table {border-collapse: collapse;}
+td {padding: 0; vertical-align: top;}
+img {border: 0;}
+form {margin: 0; padding: 0;}
+h1 {margin: 0; padding: 0;}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+
+/*---------- Шапка ----------*/
+
+header {
+    display: grid;
+    justify-content: center;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background-color: #00b4ff;
+}
+
+nav.toolbar {
+    display: grid;
+    height: 56px;
+    width: 97vw;
+    grid-template-columns: 1fr 4fr 1fr;
+
+}
+
+.headerAuth {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.RegAuth {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+a.hrefRegAuth {
+    text-decoration: none; color: white;
+    font-size: 17px;
+}
+
+a.hrefRegAuth:hover {
+    text-decoration: none; color: rgba(255, 255, 255, 0.795);
+}
+
+/*---------- Основная часть страницы ----------*/
+
+main {
+    height: 100vh;
+}
