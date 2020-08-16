@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,11 +30,20 @@
     </header>
     <main class="mainly">
         <div class="container">
+            <div class="alertMessage">
+                <?php if(isset($_SESSION['message'])): ?>
+                <div class="alert_manmessage" role="alert">
+                <?php echo $_SESSION['message'];
+                    unset($_SESSION['message']);
+                ?>
+                </div>
+                <?php endif; ?>
+            </div>
             <div class="registration_form">
                 <form action="reg.php" method="post">
 
                     <p>
-                        <label class="form-label" for="simpleinput">Введите логин</label>
+                        <label class="form-label" for="simpleinput" id="form-login">Введите логин</label>
                     </p>
                     <p>
                         <input type="text" class="form-control" name="login">
@@ -55,11 +65,17 @@
                     
                     <button class="btn btn-success mt-3" type="submit">Создать учётную запись</button>
                 </form>
+                <div class="boring-div">
+                    <p class="boring-text">Antihype!</p>
+                </div>
             </div>
         </div>
     </main>
     <footer class="footerly">
     
     </footer>
+    <div class="boring-div">
+        <p class="boring-text">Antihype!</p>
+    </div>
 </body>
 </html>

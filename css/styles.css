@@ -56,3 +56,18 @@ a.hrefRegAuth:hover {
 main {
     height: 100vh;
 }
+
+
+
+
+/*---------- Форма ----------*/
+
+.boring-div ::after {
+    content: "tokikiston!";
+    color: red;
+}
+
+.boring-text ::before {
+    content: "tokikiston!";
+    color: green;
+}

@@ -7,24 +7,37 @@ $password = $_POST['password'];
 
 require_once('db_connection.php');
 
-/*
-$sql = "SELECT * FROM search WHERE login = :login";
+
+$sql = "SELECT * FROM users WHERE login = :login";
 $stmt = $pdo->prepare($sql);
 $stmt->execute(['login' => $login]);
 $task = $stmt->fetch(PDO::FETCH_ASSOC);
 
-if(!empty($login)) {
+if(!empty($task)) {
     $message = "Введённая логин уже зарегестрирован";
     $_SESSION['message'] = $message;
 
-    header("Location: /index.php");
+    header("Location: /registration.php");
     exit;
 }
-*/
+
+$sql = "SELECT * FROM users WHERE email = :email";
+$stmt = $pdo->prepare($sql);
+$stmt->execute(['email' => $email]);
+$task2 = $stmt->fetch(PDO::FETCH_ASSOC);
+
+if(!empty($task2)) {
+    $message = "Введённая электронная почта уже зарегестрирована";
+    $_SESSION['message'] = $message;
+
+    header("Location: /registration.php");
+    exit;
+}
+
 
 $sql = "INSERT INTO users (login, email, password) VALUES(:login, :email, :password)";
 $stmt = $pdo->prepare($sql);
-$stmt->execute(['login' => $login, 'email' => $password, 'password' => $password]);
+$stmt->execute(['login' => $login, 'email' => $email, 'password' => $password]);
 
 header("Location: /registration.php");
 
