@@ -63,7 +63,7 @@ main {
 /*---------- Форма ----------*/
 
 .boring-div ::after {
-    content: "tokikiston!";
+    content: " *";
     color: red;
 }
 

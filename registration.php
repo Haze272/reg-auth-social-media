@@ -42,21 +42,21 @@
             <div class="registration_form">
                 <form action="reg.php" method="post">
 
-                    <p>
+                    <p class="boring-div">
                         <label class="form-label" for="simpleinput" id="form-login">Введите логин</label>
                     </p>
                     <p>
                         <input type="text" class="form-control" name="login">
                     </p>
 
-                    <p>
+                    <p class="boring-div">
                         <label class="form-label" for="simpleinput">Введите электронную почту</label>
                     </p>
                     <p>
                         <input type="text" class="form-control" name="email">
                     </p>
 
-                    <p>
+                    <p class="boring-div">
                         <label class="form-label" for="simpleinput">Введите пароль</label>
                     </p>
                     <p>
