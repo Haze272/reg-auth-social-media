@@ -39,6 +39,8 @@ $sql = "INSERT INTO users (login, email, password) VALUES(:login, :email, :passw
 $stmt = $pdo->prepare($sql);
 $stmt->execute(['login' => $login, 'email' => $email, 'password' => $password]);
 
-header("Location: /registration.php");
+$_SESSION['emailRegistrated'] = $email;
+
+header("Location: /registrated.php");
 
 ?>

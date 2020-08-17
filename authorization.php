@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Регистрация!</title>
+    <title>Авторизация</title>
 
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -28,6 +28,7 @@
             </div>
         </nav>
     </header>
+
     <main class="mainly">
         <div class="container">
             <div class="alertMessage">
@@ -40,7 +41,7 @@
                 <?php endif; ?>
             </div>
             <div class="registration_form">
-                <form action="scripts/reg.php" method="post">
+                <form action="scripts/auth.php" method="post">
 
                     <p class="boring-div">
                         <label class="form-label" for="simpleinput" id="form-login">Введите логин</label>
@@ -50,20 +51,13 @@
                     </p>
 
                     <p class="boring-div">
-                        <label class="form-label" for="simpleinput">Введите электронную почту</label>
-                    </p>
-                    <p>
-                        <input type="email" class="form-control" name="email" required>
-                    </p>
-
-                    <p class="boring-div">
                         <label class="form-label" for="simpleinput">Введите пароль</label>
                     </p>
                     <p>
                         <input type="password" class="form-control" name="password" required>
                     </p>
                     
-                    <button class="btn btn-success mt-3" type="submit">Создать учётную запись</button>
+                    <button class="btn btn-success mt-3" type="submit">Войти</button>
                 </form>
                 <div class="boring-div">
                     <p class="boring-text">Antihype!</p>
@@ -71,6 +65,7 @@
             </div>
         </div>
     </main>
+
     <footer class="footerly">
     
     </footer>
