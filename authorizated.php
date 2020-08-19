@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Учётная запись зарегестрирована!</title>
+    <title>Вход выполнен успешно!</title>
 
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -32,11 +32,11 @@
         <div class="container">
             <div class="registrationDone">
                 <div class="alerting">
-                    <h2>Ваша запись была успешно зарегестрирована!</h2>
-                    <?php if(isset($_SESSION['emailRegistrated'])): ?>
-                    <p>На вашу почту <?php echo $_SESSION['emailRegistrated']; ?> было отправленно электронное письмо с инструкциями</p>
-                    <p>Для входа нажмите на кнопку входа.</p>
-                    <?php unset($_SESSION['emailRegistrated']); ?>
+                    <h2>Вход был успешно выполнен!</h2>
+                    <?php if(isset($_POST['login'])): ?>
+                    <p>Вы вошли под логином <?php echo $_POST['login']; ?></p>
+                    <p>Я пидорас</p>
+                    <?php unset($_POST['login']); ?>
                     <?php endif; ?>
                 </div>
             </div>
