@@ -8,32 +8,16 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header class="headerly">
-        <nav class="toolbar">
-            <div class="headerLogo">
-                <a href="/">
-                    <img src="img/logo2.png" alt="альтернативный текст">
-                </a>
-            </div>
-            <div class="espacio">
-            </div>
-            <div class="headerAuth">
-                <div class="RegAuth">
-                    <a href="registration.php" class="hrefRegAuth">Sign in</a>
-                </div>
-                <div class="RegAuth">
-                    <a href="authorization.php" class="hrefRegAuth">Log in</a>
-                </div>
-            </div>
-        </nav>
-    </header>
+
+    <?php require_once 'components/header.html'; ?>
+    
     <main class="mainly">
         <div class="container">
             <h1>Уникальная социальная сеть!</h1>
         </div>
     </main>
-    <footer class="footerly">
-    
-    </footer>
+
+    <?php require_once 'components/footer.html'; ?>
+
 </body>
 </html>
