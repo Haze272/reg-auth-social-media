@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +10,7 @@
 </head>
 <body>
 
-    <?php require_once 'components/header.html'; ?>
+    <?php require_once 'components/header.php'; ?>
     
     <main class="mainly">
         <div class="container">

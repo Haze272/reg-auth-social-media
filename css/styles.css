@@ -6,6 +6,7 @@ td {padding: 0; vertical-align: top;}
 img {border: 0;}
 form {margin: 0; padding: 0;}
 h1 {margin: 0; padding: 0;}
+a {text-decoration: none;}
 
 .container {
     width: 1200px;
@@ -49,6 +50,11 @@ a.hrefRegAuth {
 
 a.hrefRegAuth:hover {
     text-decoration: none; color: rgba(255, 255, 255, 0.795);
+}
+
+img.logoutImage {
+    width: 50%;
+    height: 50%;
 }
 
 /*---------- Основная часть страницы ----------*/

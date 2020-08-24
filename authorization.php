@@ -10,19 +10,10 @@
 </head>
 <body>
     
-    <?php require_once 'components/header.html'; ?>
+    <?php require_once 'components/header.php'; ?>
 
     <main class="mainly">
         <div class="container">
-            <div class="alertMessage">
-                <?php if(isset($_SESSION['message'])): ?>
-                <div class="alert_manmessage" role="alert">
-                <?php echo $_SESSION['message'];
-                    unset($_SESSION['message']);
-                ?>
-                </div>
-                <?php endif; ?>
-            </div>
             <div class="registration_form">
                 <form action="scripts/auth.php" method="post">
 
