@@ -57,6 +57,10 @@ img.logoutImage {
     height: 50%;
 }
 
+.exitButtony:hover {
+    opacity: 1;
+}
+
 /*---------- Основная часть страницы ----------*/
 
 main {

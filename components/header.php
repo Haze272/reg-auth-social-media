@@ -13,9 +13,10 @@
             <a href="#" class="hrefRegAuth"><?php echo $_SESSION['user']['login']; ?></a>
         </div>
         <div class="RegAuth">
-            <a href="#" class="hrefRegAuth">
-                <img src="img/logout.png" alt="logout" class="logout">
-            </a>
+            <form action="scripts/exit.php" method="post">
+                <input type="hidden" name="isExit">
+                <input type="image" src="img/logout.png" alt="logout" class="exitButtony">
+            </form>
         </div>
         <?php else: ?>
         <div class="RegAuth">
