@@ -10,7 +10,7 @@
     <div class="headerAuth">
         <?php if(isset($_SESSION['user'])): ?>
         <div class="RegAuth">
-            <a href="#" class="hrefRegAuth"><?php echo $_SESSION['user']['login']; ?></a>
+            <a href="profile.php" class="hrefRegAuth"><?php echo $_SESSION['user']['login']; ?></a>
         </div>
         <div class="RegAuth">
             <form action="scripts/exit.php" method="post">

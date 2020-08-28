@@ -81,3 +81,43 @@ main {
     content: "tokikiston!";
     color: green;
 }
+
+/*---------- Профиль ----------*/
+
+.profileBox {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+.avatarContainer {
+    display: grid;
+    justify-content: center;
+    padding-top: 3vh;
+    padding-bottom: 3vh; /* Надо будет доработать */
+}
+
+.avatarImage {
+    width: 180px; /* задаете свои размеры */
+    height: 180px;
+    overflow: hidden;
+    background: #fff;
+    padding: 5px; /* создание отступов */
+    border-radius: 50%;
+    /* не забываем о кроссбраузерности */
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border: #aaa 1px solid;
+    box-shadow: 0px 1px 1px 1px #bbb; /* тень */
+    -moz-box-shadow: 0px 1px 1px 1px #bbb;
+    -webkit-box-shadow: 0px 1px 1px 1px #bbb;
+}
+.avatarImage img {
+    display: block;
+    width:100%;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+}
+.profileData {
+    background-color: gold;
+}
