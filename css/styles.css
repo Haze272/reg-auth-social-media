@@ -119,5 +119,7 @@ main {
     -webkit-border-radius: 50%;
 }
 .profileData {
+    display: grid;
+    grid-template-columns: 1fr;
     background-color: gold;
 }

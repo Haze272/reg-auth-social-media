@@ -14,6 +14,7 @@
     
     <main class="mainly">
         <div class="container">
+            <?php if(isset($_SESSION['user'])): ?>
             <div class="profileBox">
                 <div class="avatarContainer">
                     <div class="avatarImage">
@@ -22,9 +23,22 @@
                     </div>
                 </div>
                 <div class="profileData">
-                    <p>govmo</p>
+                    <div class="userLogin">
+                        <p>Login:</p>
+                        <p><?php echo $_SESSION['user']['login']; ?></p>
+                    </div>
+                    <div class="userEmail">
+                        <p>Email</p>
+                        <p><?php echo $_SESSION['user']['email']; ?></p>
+                    </div>
+                    <div class="userRole">
+                        <p>Role</p>
+                        <?php $_SESSION['user']['role'] ?>
+                        <p><?php echo $_SESSION['user'][''] ?></p>
+                    </div>
                 </div>
             </div>
+            <?php endif; ?>
         </div>
     </main>
 
