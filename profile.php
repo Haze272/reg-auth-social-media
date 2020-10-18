@@ -23,11 +23,11 @@
                     </div>
                 </div>
                 <div class="profileData">
-                    <div class="userLogin">
+                    <div class="userInfo">
                         <p>Login:</p>
                         <div class="rectangleData"><p><?php echo $_SESSION['user']['login']; ?></p></div>
                     </div>
-                    <div class="userEmail">
+                    <div class="userInfo">
                         <p>Email</p>
                         <div class="rectangleData"><p><?php echo $_SESSION['user']['email']; ?></p></div>
                     </div>
@@ -42,9 +42,21 @@
                     $result = $result->fetch(PDO::FETCH_ASSOC);
                     
                     ?>
-                    <div class="userRole">
+                    <div class="userInfo">
                         <p>Role</p>
-                        <div class="rectangleData"><p><?php echo $result['roleName']; ?></p></div>
+                        <?php if ($result['roleName'] == "User"): ?>
+                        <div class="rectangleData userText"><p><?php echo $result['roleName']; ?></p></div>
+                        <?php elseif ($result['roleName'] == "Regular"): ?>
+                        <div class="rectangleData regularText"><p><?php echo $result['roleName']; ?></p></div>
+                        <?php elseif ($result['roleName'] == "Active"): ?>
+                        <div class="rectangleData activeText"><p><?php echo $result['roleName']; ?></p></div>
+                        <?php elseif ($result['roleName'] == "Helper"): ?>
+                        <div class="rectangleData helperText"><p><?php echo $result['roleName']; ?></p></div>
+                        <?php elseif ($result['roleName'] == "Moderator"): ?>
+                        <div class="rectangleData moderatorText"><p><?php echo $result['roleName']; ?></p></div>
+                        <?php elseif ($result['roleName'] == "Administrator"): ?>
+                        <div class="rectangleData administratorText"><p><?php echo $result['roleName']; ?></p></div>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>
